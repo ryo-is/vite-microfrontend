@@ -10,7 +10,6 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       federation({
-        name: 'admin-web',
         remotes: {
           remote: {
             external: env.VITE_REMOTE_EXTARNAL_URL,

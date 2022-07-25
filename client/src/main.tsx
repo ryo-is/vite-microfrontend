@@ -1,14 +1,8 @@
-import { render } from 'react-dom';
-import { SprocketUIProvider } from '@sprocket-inc/sprocket-ui';
+import { createRoot } from 'react-dom/client';
 import { App } from './App';
 import './index.css';
 
 const root = document.getElementById('root');
 if (root) {
-  render(
-    <SprocketUIProvider>
-      <App />
-    </SprocketUIProvider>,
-    root
-  );
+  createRoot(root).render(<App />);
 }
