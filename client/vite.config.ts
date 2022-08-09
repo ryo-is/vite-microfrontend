@@ -7,6 +7,9 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
 
   return {
+    server: {
+      port: 9999,
+    },
     plugins: [
       react(),
       federation({
@@ -23,9 +26,6 @@ export default defineConfig(({ mode }) => {
           },
           'react-dom': {
             requiredVersion: pkg.dependencies['react-dom'],
-            singleton: true,
-          },
-          '@chakra-ui/react': {
             singleton: true,
           },
         },
